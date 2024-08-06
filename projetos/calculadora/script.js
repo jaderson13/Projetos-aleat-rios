@@ -24,7 +24,8 @@ var parentese = false;
 var virgula = false;
 var tela = document.querySelector("#tela");
 var operador = false;
-var operadores = ["x", "÷", "+", "-",];
+var operadores = [",", "x", "÷", "+", "-",];
+var virgula_posicao = -1;
 
 function Limpar_tela() {
     tela.innerText = "0";
@@ -83,13 +84,15 @@ function Exibir_virgula(digito) {
 
     if (digito == "," && !virgula) {
 
-        for (let i = 0; i < operadores.length; i++) {
+        for (let i = 1; i < operadores.length; i++) {
             if (operadores[i] == ultimo_caracter) {
                 digito = "0,";
+                break;
             }
         }
 
         tela.innerText += digito;
+
         virgula = true;
         zerado = false;
     }
@@ -97,11 +100,17 @@ function Exibir_virgula(digito) {
 
 function Exibir_calculo() {
     let resultado = tela.innerText;
-    let troca = ["*", "/"];
+    let troca = [".","*", "/"];
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < troca.length; i++) {
         resultado = resultado.replaceAll(operadores[i], troca[i]);
     }
-
-    tela.innerText= (eval(resultado));
+     
+    tela.innerText= (eval(resultado));   
 }
+
+
+
+//function Inserir_ponto(){
+
+//}
