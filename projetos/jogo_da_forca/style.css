@@ -1,0 +1,105 @@
+body{
+    background-image:url("img/fundo3.jpg");
+}
+
+main{
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:white;
+}
+
+main h1{
+    font-size:70px;
+}
+
+main h2{
+    font-size:50px;
+}
+
+.tela_inicial{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+}
+
+#btn_iniciar{
+width:200px;
+height:180px;
+font-size:90px;
+border-radius:100px;
+border:solid white 3px;
+background:rgb(81, 206, 255);
+color:rgb(255, 255, 255);
+}
+
+#btn_iniciar:hover{
+background:rgb(99, 211, 255);
+font-size:82px;
+}
+
+#palavra1,#palavra2{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-flow:row wrap;
+}
+
+#tela_forca{
+margin-bottom:180px;
+}
+
+.card_ativo,.card_desativado{
+    background:rgb(82, 0, 182);
+    color:white;
+    width:80px;
+    height:93px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px 8px 10px 8px;
+    font-size:70px;
+    border-radius:20px;
+}
+
+.card_ativo:hover{
+    font-size:65px;
+}
+
+.card_desativado{
+ background:rgba(82, 0, 182, 0.598) !important;
+}
+
+.teclado{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    width:80%;
+}
+
+.tecla,.tecla_inativa{
+    background:#ffffff;
+    width:63px;
+    height:55px;
+    margin: 0px 6px 10px 8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    border-radius:15px;
+    font-family:monospace;
+    color:rgb(0, 0, 0);
+}
+
+.tecla_inativa{
+    background:rgba(230, 230, 230, 0.614)!important;
+    color:rgba(44, 44, 44, 0.442)!important;
+}
+
+.tecla:hover{
+    background:#fff8f8;
+    font-size:37px;
+}
